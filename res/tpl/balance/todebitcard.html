@@ -1,0 +1,57 @@
+﻿<article class="wrap p10 J_WalletContainer" id="card_cont">
+    <div class="cui_tips mb10 grey2">返现兑换成礼品卡最高可获10%加赠<span class="fr blue" id="js_exchange">立即兑换</span></div>
+    <div class="mb5 grey2 p0_15">可使用返现余额：<i class="font16"><small>&yen;</small><span id="js_balance"></span></i></div>
+    <ul class="border p10li mb10">
+        <li>
+            <i class="fr">元</i><em class="fl w80">转账金额</em>
+            <div class="input">
+                <input id="js_amount" maxlength="10" type="tel" placeholder="输入转账金额" value="">
+            </div>
+        </li>
+    </ul>
+    <ul class="border p10li2 mb10">
+        <li id="js_bank_city"><i class="fr"></i>开户行所在城市</li>
+        <li id="js_bank" >
+            <i class="fr"></i>选择银行
+        </li>
+        <li class="no" id="js_bankname_wrap" style="display:none;">
+            <em class="fl w80 font14">开户行名称</em>
+            <div class="input">
+				<input type="text" placeholder="" id="js_bank_name" class="autofocus "  >
+            </div>
+        </li>
+        <li class="no">
+            <em class="fl w80 font14">开户人姓名</em>
+            <div class="input">
+                <input maxlength="40" type="text" placeholder="" id="js_name" >
+            </div>
+        </li>
+        <li class="no">
+            <em class="fl w80">储蓄卡号</em>
+            <div class="input">
+                <input name="" type="tel" maxlength="22" placeholder="" id="js_card_no" value="">
+            </div>
+        </li>
+    </ul>
+    <ul class="border p10li2 mb20">
+        <li id="js_id_type" >
+            <i class="fr"></i>持卡人证件类型
+        </li>
+        <li class="no">
+            <em class="fl w110 font14">持卡人证件卡号</em>
+            <div class="input">
+                <input name="" id="js_id_no" type="text" maxlength="40" placeholder="" value="">
+            </div>
+        </li>
+    </ul>
+    <button class="btn" id="js_submit">转账</button>
+</article>
+
+<script type="text/template" id="card_tpl">
+</script>
+
+
+
+
+
+

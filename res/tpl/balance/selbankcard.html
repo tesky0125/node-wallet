@@ -1,0 +1,8 @@
+﻿<article class="wrap">
+    <dl class="citylist myc_addrlist" id="js_banklist">
+        <%
+        _.each(data, function(object){
+        %>
+        <dd data-id="<%=object.bankid %>"><%=object.bankname %></dd>
+        <%}); %></dl>
+</article>

@@ -1,0 +1,79 @@
+﻿<article class="wrap J_WalletContainer">
+
+    <%if(renderType == 1) {%>
+    <div class="p5_0"></div>
+    <ul class="border2 p10li mb10 iconbank">
+        <li class="font14">优先使用“携程钱包” 付款 
+            <%if(first == 0 || first == 1) {%>
+            <span class="select2 fr">
+            <i class="yes J_Active">是</i>
+            <i class="J_Inactive">否</i></span>
+            <%} else{ %>
+            <span class="select2 fr">
+            <i class="J_Active">是</i>
+            <i class="yes J_Inactive">否</i></span>
+            <%}; %>
+        </li>
+    </ul>
+
+    <div class="grey2 p0_15 mb20 font13"><b>携程钱包付款说明</b><i class="question J_Explain"></i></div>
+    <%}; %>
+
+
+     <%if (fastPayCard.length == 0 && fastPayDefectCard.length == 0) {%>
+     <div class="p0_15 mb5 mt15"><b>请添加默认付款的信用卡</b></div>
+     <%} else { %>
+        <%if (fastPayCard.length >= 2) {%>
+        <div class="p0_15 mb10 mt15"><b>选择默认付款的信用卡</b>
+        <div class="grey2 font12">若首选卡不可用，系统将默认使用下一张可用卡</div>
+        </div>
+        <%} else { %>
+         <div class="p0_15 mb5 mt15"><b>选择默认付款的信用卡</b></div>   
+        <%}; %>
+     <%}; %>
+
+     <ul class="border2 p10_15li iconbank">
+        <% for (var item in fastPayCard) {%>
+            <%if(fastPayCard[item].bindstatus == 43 && renderType == 1){ %>
+         <li class="cardselect J_Card" data-cardid="<%= fastPayCard[item].bindid %>">
+            <%} else{ %>
+         <li class="J_Card" data-cardid= "<%= fastPayCard[item].bindid %>">
+            <%};%>
+             <figure class="default <%print(' ' +fastPayCard[item].cardIcon)%>"></figure>
+             <div class="h40">
+                <span class="font16 pr12"><%= fastPayCard[item].banknameShort %></span><em class="cardclass"><%= fastPayCard[item].cardtypeUI %></em>
+                <p class="font14 grey2"><%= fastPayCard[item].cardno %></p>
+             </div>
+         </li>
+        <% };%>
+     </ul>
+     
+     <%if(fastPayDefectCard.length > 0) {%>
+     <div class="p10_15 grey2 lh1 font12">需要补填信息的银行卡</div>
+     <%}; %>
+     <ul class="border2 p10_15li iconbank mb20">
+        <% for (var item in fastPayDefectCard) {%>
+        <li class="J_DefectCard" data-cardid="<%= fastPayDefectCard[item].cardid %>">
+            <figure class="default <%print(' ' + fastPayDefectCard[item].cardIcon)%>"></figure>
+            <div class="h40">
+                <span class="font16 pr12"><%= fastPayDefectCard[item].banknameShort %></span><em class="cardclass"><%= fastPayDefectCard[item].cardtypeUI %></em>
+                <p class="font14 grey2"><%= fastPayDefectCard[item].cardno %></p>
+            </div>
+        </li>
+        <%};%>
+
+        <%if(usedcardcount < 10 || (usedcardcount >= 10 && fastPayCard.length == 0 && fastPayDefectCard.length == 0)) {%>
+        <li class="J_AddCard">
+            <figure class="newadd"></figure>
+            <div class="mt10">新增信用卡</div>
+        </li>
+        <%} else { %>
+        <li class="newaddno">
+            <figure class="newadd"></figure>
+            <div>新增信用卡</div>
+            <div class="font10">已达上限，如需添加请先删除已有常用卡</div>
+        </li>
+        <%}; %>
+    </ul>
+
+</article>

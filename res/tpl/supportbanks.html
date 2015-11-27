@@ -1,0 +1,17 @@
+﻿<article class="wrap">
+    <div class="cui-view">
+        <ul class="cui-tab-mod">
+            <%if(cardtype === 2 || cardtype === 3){%>
+            <li class="J_Tabs J_CC cui-tab-current" data-key="1" data-index="0" >信用卡</li>
+            <%};%>
+            <%if(cardtype === 1 || cardtype === 3){%>
+            <li class="J_Tabs J_SC"  data-key="2" data-index="1">储蓄卡</li>
+            <%};%>
+            <%if(cardtype === 3){%>
+            <i class="cui-tab-scrollbar cui-tabnum2"></i>
+            <%};%>
+            
+        </ul>
+    </div>
+    <div class="J_Container"></div>
+</article>

@@ -1,0 +1,30 @@
+<article class="wrap">
+  <div class="white">  <!--新增白色背景-->
+      <div class="zhanx">
+          <span class="zabxlogo"><img src="<%=complogo%>" width="75" height="25"></span>
+         <%if(orderstatus === 1){%>
+         <span class="bxlogo_3"></span>
+        <div class="text_width">
+            <h3 class="mb5"><%=prdname%></h3>
+            <div>出保成功后，我们将用短信通知您</div>
+        </div>
+           <%}else if(orderstatus === 2){%>
+            <span class="bxlogo_1"></span>
+          <div class="text_width">
+              <h3 class="mb5 font21"><%=prdname%></h3>
+              <div>保单号：No.<%=orderno%></div>
+          </div>
+       <%}%>
+      </div>
+   </div>
+
+  <div class="anx_box2 mb10">
+      <ul class="J_InsrcDetailList">
+          <li><i></i><span>姓名</span><div><%=uname%></div></li>
+          <li><i></i><span><%=idname%></span><div><%=idno%></div></li>
+      </ul>
+      <div class="bor-top"><%=prddesc%></div>
+            <div class="mt5 blue mb15 font12 J_GoNotice"></div>
+  </div>
+  <div class="p10"><button class="btn green J_Insrc_Go_Claim"><i class="btnlogo"></i>理赔</button></div>
+</article>

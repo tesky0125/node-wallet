@@ -1,0 +1,46 @@
+<article class="wrap">
+    <%if(entry==='addaccountinfo'){%>
+        <%if(authstatus===1){%>
+    <div class="t_c"><span class="smxx_ok"><i></i>账户实名信息已成功认证</span></div>
+        <%}else if(authstatus===3 || authstatus===100){%>
+    <div class="t_c"><span class="smxx_ok"><i></i>账户实名信息已提交审核</span></div>
+        <%}%>
+    <%}%>
+    <%if(birthok){%>
+    <div class="p10_15 pt10">最后1步：填写接收保单信息的手机</div>
+    <%}else{%>
+    <div class="p10_15 pt10">最后1步：填写生日/接收保单手机</div>
+    <%}%>
+    <ul class="border2 p10li">
+        <li class="arryes J_HasBirth" style="display: none"><em class="fl w80">生日</em>
+            <div class="input">
+                <input class="J_BirthChoice" type="text" readonly placeholder="请选择">
+            </div>
+        </li>
+        <li class="J_HasMobile" style="display: none"><em class="fl w80">手机</em>
+            <span class=""><%=mobile%></span>
+            <span class="fr blue J_Modify-mobile">修改</span>
+        </li>
+        <li class="J_NoMobile" style="display: none"><em class="fl w80">手机</em>
+            <span class="code3 valign J_Get-indentify-code gets">获取验证码</span>
+            <div class="J_CodeLoading greyload-icon fr code4 hidden">
+                 <span class="cui-pro-radius"></span>
+                 <span class="greylogo"></span>
+            </div>
+            <div class="input">
+                <input class="J_Mobile" type="tel" value="" maxlength="11" placeholder="输入手机号码">
+            </div>
+        </li>
+        <li class="J_NoMobile" style="display: none">
+            <em class="fl w80">验证码</em>
+            <i class="J_Error clearinput hidden fr"></i><i class="J_Correct hidden correct fr"></i><i class="J_Loading hidden loading fr mt13"></i>
+            <i class="J_ClearInput clear-input" ><span></span></i>
+            <div class="input">
+                <input class="J_Indentify J_Input" type="text" maxlength="6" placeholder="输入短信验证码">
+            </div>
+        </li>
+    </ul>
+
+    <div class="p10 J_GoNext"><button class="btn">确认</button></div>
+    <div class="J_CalendarBirth"></div>
+</article>

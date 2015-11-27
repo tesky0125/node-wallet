@@ -1,2 +1,15 @@
 <% layout('layout.html') -%>
-<span>Hello World!</span>
+<script type="text/lizard-config">
+    {
+    "url_schema": "index",
+    "viewName":"index",
+    "model": {},
+    "view":{
+    "header": Lizard.T("headTmpl"),
+    "viewport": Lizard.T("viewportTmpl")
+    },
+    "controller": "res/ctrl/index.js"
+    }
+</script>
+
+

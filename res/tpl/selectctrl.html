@@ -1,0 +1,14 @@
+﻿<div class="cui-view cui-layer J_Select" style="z-index: 10100; position: absolute; left: 0px; margin: 0px; padding: 0px; top: 0px; width: 100%; min-width: 320px; margin-left: 0px; height: 168px;">
+    <ul class="border2 p10li cblack" style=" margin-left:-5px;">
+        <% for( item in selItems) {%>
+        <li class="J_SelectItem" data-idx="<%= item %>">
+            <%= selItems[item].nameMenu %>
+            <% if(item == itemCheck) {%>
+            <i class="fr correct"></i>
+            <%};%>
+        </li>
+        <%};%>
+    </ul>
+</div>
+
+<div class="cui-view cui-mask cui-opacitymask J_Ml" style="background:rgba(0,0,0,.7); position: absolute; left: 0px; top: 0px; width: 100%; z-index: 10099;"><div></div></div>

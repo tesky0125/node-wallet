@@ -1,0 +1,45 @@
+﻿<article class="wrap J_WalletContainer">
+    <ul class="border p10li2 iconbank m10 mb2">
+        <li class="no">
+            <figure class="<%print(cardIcon+' ')%> default"></figure>
+            <div class="h40">
+                <span class="font17 pr12"><%=bankname%></span><em class="cardclass"><%=cardtypeUI%></em>
+                <p class="grey2 font13"><%=cardno%></p>
+            </div>
+        </li>
+       
+        <li class="no">
+            <em class="fl w80">持卡人</em>
+            <div class="input">
+                <input class="J_Name" maxlength="40" type="text" placeholder="输入持卡人姓名" />
+            </div>
+        </li>
+        <li class="J_CertType" >
+             <em class="fl w80">证件类型</em>
+             <div class="input">
+                <em class="J_CertTypeValue" ></em>
+            </div>
+            <i class="fr"></i>
+        </li>
+        <li class="no">
+            <em class="fl w80">证件号</em>
+            <div class="input">
+                <input name="" class="J_CertNo" type="text" maxlength="18" placeholder="输入证件号码" value=""/>
+            </div>
+        </li>
+    </ul>
+
+    <div class="topgrey">
+        返现余额：<span><small>&yen;</small><%=recash%></span>
+    </div>
+    <ul class="border2 p10li mb10">
+        <li>
+            <i class="J_ClearInput clear-input"><span></span></i><em class="fl w80 font16">转出金额</em>
+            <div class="input">
+                <input class="J_Input J_Amount" maxlength="20"  placeholder="只支持转出整数金额" />
+            </div>
+        </li>
+    </ul>
+    <div class="grey3 lh1 J_Tip p0_15 mb10">单次转出限额<%=maxValue%>元</div>
+    <div class="p10"><button class="btn J_RollOut">转出</button></div>
+</article>

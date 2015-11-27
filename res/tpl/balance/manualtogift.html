@@ -1,0 +1,25 @@
+﻿<article class="greyfont">
+    <ul class="cui-tab-mod">
+        <li class="cui-tab-current" id="exchange_hand">手动兑换</li>
+        <li id="exchange_auto">自动兑换</li>
+        <i class="cui-tab-scrollbar cui-tabnum2"></i>
+    </ul>
+    <section class="p10" id="exchange_hand_list">
+        <ul class="list_st_border list_nav">
+            <li>可用返现余额<i class="font16"><small>&yen;</small><span id="left_cash_amt"></span></i></li>
+        </ul>
+        <ul id="ul_exg_meth" class="list_st_border cardchange bmnone">
+            <li>礼品卡类型<em class="smalltab"><span class="current" id="self_travel">任我游</span><span id="self_walk">任我行</span></em></li>
+        </ul>
+        <ul class="list_st_border cardchange change2 ">
+            <li id="li_exg_amt">兑换金额<em class="dhmoney"><input type="tel" class="txt" id="exgAmout" maxlength="10" placeholder=""></em><i class="yuan">元</i></li>
+            <li class="grayli" style="display:none;" id="travel_ticket_amt"><em id="ticket_amt" class="size14">0</em><i class="yuan">元 礼品卡</i></li>
+        </ul>
+        <div id="exg_rule_text" class="font12 mt10 mb5" style="display:none;">
+            <p>手动兑换限时加赠：</p>
+            <p>任我游：每满100送10；任我行：每满100送5</p>
+        </div>
+        <p class="font12 mb10">任我游礼品卡可用于预付酒店、旅游度假产品，任我行礼品卡可用于预付酒店、机票、火车票、旅游度假产品。详细了解<span class="blue" id="travel_ticket_intro">礼品卡说明</span></p>
+        <button id="validateBtn" class="btn">确认</button>
+    </section>
+</article>

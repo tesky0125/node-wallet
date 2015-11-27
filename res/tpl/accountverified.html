@@ -1,0 +1,43 @@
+﻿<!-- 开始：0
+已认证：1
+审核中：2 -->
+
+<article class="wrap bgc3 height100">
+   <% if(authStatus==0){%>
+        <div class="rzstart"></div>
+        <div class="font18 t_c blue lh1 mt10 mb10"><%=asText%></div>
+   <% }else if(authStatus==1){%>
+        <div class="rzstart2"><%=asText%></div>
+    <%}else if(authStatus==2){%>
+        <div class="rzstart3"><%=asText%></div>
+    <%}%>
+  <div class="p10_15 grey"><%=authText%></div>
+   <% if(authStatus==1||authStatus==2){%>
+         <ul class="realname2">
+            <li><span>姓名</span><%=userName%></li>
+            <%if(idtype != 1){%>
+            <li><span>证件类型</span><%=cardTypeString%></li>
+            <%};%>
+            <%if(idtype == 1){%>
+            <li><span>身份证</span><%=idNo%></li>
+            <%}else{%>
+            <li><span>证件号码</span><%=idNo%></li>
+            <%};%>
+            <%if(authStatus==1){%>
+              <li><span>用户ID</span><%=ctrpuid%></li>
+            <%}%>
+        </ul>
+    <%}%>
+    <% if(authStatus==0){%>
+ <div class="p10">
+  <button class="J_GoSet btn p10 lh1"><div class="mb2">验证身份信息认证</div><div class="font14 lh1">（适用大陆居民）</div></button>
+ </div>
+ <div class="p10">
+  <button class="J_GoAuthByBank btn yellow p10 lh1"><div class="mb2">验证银行卡信息认证</div><div class="font14 lh1">（适用港澳台、外籍人士）</div></button>
+ </div>
+    <%}else if(authStatus==2&&as==3){%>
+ <div class="p10 mt20">
+  <button class="J_GoSet btn">修改实名认证信息</button>
+ </div>
+    <%}%>
+</article>

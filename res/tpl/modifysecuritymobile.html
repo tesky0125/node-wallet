@@ -1,0 +1,73 @@
+﻿<article class="wrap J_WalletContainer">
+    
+    <div class="topgrey">
+        <%if(pagetype == 'withdraw'){%>
+            为了您的账户安全，请验证安全手机
+        <%}else if(pagetype == 'finger'){%>
+            <%if(mobile != ''){%>
+                开通指纹支付，需进行手机验证
+            <%}else{%>
+                开通指纹支付，需进行邮箱验证
+            <%};%>
+        <%}else{%>
+        已向原手机号发送短信验证码
+        <%};%>
+    </div>    
+    
+    <ul class="border2 p10li mb10">
+        <%if(pagetype == 'finger'){%>
+        <li>
+            <%if(mobile != ''){%>
+            <em class="fl w80">手机</em>
+            <%}else{%>
+            <em class="fl w80">邮箱</em>
+            <%};%>
+            <div class="code3 valign J_Get-indentify-code gets">获取验证码</div>
+            <div class="J_CodeLoading greyload-icon fr code4 hidden">
+                 <span class="cui-pro-radius"></span>
+                 <span class="greylogo"></span>
+            </div>           
+            <div class="input">
+                <%if(mobile != ''){%>
+                <input type="text" value="<%=mobile%>" readonly>
+                <%}else{%>
+                <input type="text" value="<%=email%>" readonly>
+                <%};%>
+                
+            </div>
+        </li>
+        <%}else{%>
+        <li>
+            <em class="fl w80">原手机号</em>
+            <div class="code3 valign J_Get-indentify-code gets">获取验证码</div>
+            <div class="J_CodeLoading greyload-icon fr code4 hidden">
+                 <span class="cui-pro-radius"></span>
+                 <span class="greylogo"></span>
+            </div>         
+            <div class="input">
+                <input type="text" value="<%=mobile%>" readonly>
+            </div>
+        </li>
+        <%};%>
+        <li class="J_I_Container">
+            <em class="fl w80">验证码</em>
+            <i class="J_Error clearinput hidden fr"></i><i class="J_Correct hidden correct fr"></i><i class="J_Loading hidden loading fr mt13"></i>
+            <i class="J_ClearInput clear-input" ><span></span></i>
+    		<div class="input">
+        		<%if(mobile != ''){%>
+        		<input name="" class="J_Indentify J_Input" maxlength="6" type="tel" placeholder="输入短信验证码">
+        		<%}else{%>
+        		<input name="" class="J_Indentify J_Input" maxlength="6" type="tel" placeholder="输入邮箱获得的验证码">
+        		<%};%>
+    		</div>
+		</li>
+    </ul>
+    <div class="p10">
+        <button class="btn J_NextBtn">下一步</button>
+    </div>
+    <%if(pagetype != 'finger'){%>
+    <div class="p10">
+    若当前手机号码已不用/丢失，或无法收到验证码，请<span class="blue J_CallServices">致电携程客服</span>
+    <div>
+    <%};%>
+</article>

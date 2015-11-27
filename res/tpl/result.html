@@ -1,0 +1,71 @@
+﻿<%if(renderCode == 1||renderCode == 5){%>
+        <article class="">
+      <div class="bgc3 p10 mb10 bor-b1">
+        <div class="cashuccess pt10">
+          <div class="<%=msgStatue%>"></div>
+          <div class="font18px lh1 mb5"><%=msgTitle%></div>
+          <div class="grey2 font12"><%=msg%></div>
+        </div>
+        <div class="cashuccesslist">
+          <div><em>转出金额</em><span class="font14">&yen;<%=amount%></span></div>
+          <div><em>转出到</em><span><%=bankname%> 储蓄卡</span></div>
+        </div>
+      </div>
+      <div class="p10 mt30">
+        <button class="btn J_FinishBtn"><%=btnText%></button>
+      </div>
+    </article>
+<%}else if(renderCode==10){%>
+    <article class="wrap bcwhite p10">
+      <div class="rzyes"></div>
+      <div class="rzyescolor"><%=messageSuccess%></div>
+      <div class="grey2 p10_5"><%=msg%></div>
+    </article>
+    <div class="p10 mt30">
+      <button class="btn J_FinishBtn"><%=btnText%></button>
+    </div>
+<%}else{%>
+    <article class="wrap bcwhite pt10 J_WalletContainer">
+    <%if(resultCode == 1){%>
+    <div class="cashcard cardyes mar10">
+        <div class="font21"><%=msgTitle%></div>
+        <div class="grey2"><%=msg%></div>
+    </div>
+    <%}else if (resultCode == 3){%>
+    <div class="cashcard processing mar10">
+        <div class="font21"><%=msgTitle%></div>
+        <div class="grey2"><%=msg%></div>
+    </div>
+    <%}else{%>
+    <div class="cashcard cardno mar10">
+        <div class="font21"><%=msgTitle%></div>
+        <div class="grey2"><%=msg%></div>
+    </div>
+    <%};%>
+
+    <%if(renderCode == 4){%>
+        <%=detail%>
+    <%}else{%>
+
+    <!--如果是返现失败或充值失败(resultCode == 2)，隐藏以下详情信息段-->
+    <ul class="rechargelist J_Detail <%if(resultCode == 2 && (renderCode == 2 || renderCode == 3)){print(' hidden')};%>">
+         <%if(renderCode == 2){%>
+        <!--返现-->
+        <li><span>转出金额</span><small>&yen;</small> <%=amount%></li>
+        <li><span>转出至</span><%=buname%></li>
+        <%}else if(renderCode == 3){%>
+        <!--充值-->
+        <li><span>充值金额</span><small>&yen;</small> <%=amount%></li>
+        <li><span>银行卡</span><%=bankname%></li>
+        <%}else if (renderCode == 6){%>
+        <li><span>手机号码</span><%=phone%></li>
+        <li><span>充值金额</span><small>&yen;</small><%=realamt%></li>
+        <li><span>兑换方式</span><%=buname%> <small>&yen;</small><%=amount%></li>
+        <%};%>
+    </ul>
+    <%};%>
+</article>
+
+<div class="p10 mt30"><button class="mt10 btn J_FinishBtn"><%=btnText%></button></div>
+<%};%>
+

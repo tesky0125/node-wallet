@@ -1,0 +1,19 @@
+﻿<div class="J_PopupSelect cui-pop-box">
+    <div class="cui-hd" style="z-index: 3007; padding-right: 0px; background: #f2f2f2; color: #099fde; line-height: 48px; height: 48px; border-bottom: 2px solid #43b6e6; ">
+        <%= title%><div class="J_Widget_SelectClose cui-grayload-close close2" style=" margin-top: 5px; margin-right: 8px; position:relative;"></div>
+    </div>
+    <div class="cui-bd">
+        <ul class="p10li font18px J_List" style="position:relative;height:250px;overflow-y:scroll;overflow-x:hidden; width:100%">
+            <% for( item in selItems) {%>
+            <li class="J_Widget_PopupSelect border2"
+                data-id="<%= selItems[item].idtype %>" data-value="<%= selItems[item].idname %>">
+                <%= selItems[item].idname %>
+                <% if(selItems[item].idtype == defaultValue) {%>
+                <i class="fr correct"></i>
+                <%};%>
+            </li>
+            <%};%>
+        </ul>
+    </div>
+</div>
+

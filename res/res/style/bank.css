@@ -1,0 +1,91 @@
+﻿.iconbank li figure{ padding: 0px; margin: 0px; width:40px; height: 40px; float: left; display: block;  margin-right:10px; background-size:40px; vertical-align: middle; position:relative;}
+.default{ background:url(../img/bank/BANK_default.png) no-repeat;}/**/
+.bank_4,.bank_556,.bank_1128{ background:url(../img/bank/BANK_ABC.png) no-repeat;}  /*中国农业银行*/
+.bank_520,.bank_1030{ background:url(../img/bank/BANK_BHB.png) no-repeat;}/*河北银行*/
+.bank_570,.bank_27,.bank_1141{ background:url(../img/bank/BANK_BJBANK.png) no-repeat;}/*北京银行*/
+.bank_502{ background:url(../img/bank/BANK_BJRCB.png) no-repeat;}/*北京农商银行*/
+.bank_1,.bank_553,.bank_1129{ background:url(../img/bank/BANK_BOC.png) no-repeat;}/*中国银行*/
+.bod{ background:url(../img/bank/BANK_BOD.png) no-repeat;}/*东莞银行*/
+.bank_1002{ background:url(../img/bank/BANK_BOHAIB.png) no-repeat;}/*渤海银行*/
+.bank_533{ background:url(../img/bank/BANK_BOQH.png) no-repeat;}/*青海银行*/
+.bank_503,.bank_1007{ background:url(../img/bank/BANK_BSB.png) no-repeat;}/*包商银行*/
+.bank_5,.bank_557,.bank_1130{ background:url(../img/bank/BANK_CCB.png) no-repeat;}/*中国建设银行*/
+.bank_15,.bank_560,.bank_1133{ background:url(../img/bank/BANK_CEB.png) no-repeat;}/*光大银行*/
+.bank_20,.bank_564,.bank_1138{ background:url(../img/bank/BANK_CIB.png) no-repeat;}/*兴业银行*/
+.bank_17,.bank_562,.bank_1132{ background:url(../img/bank/BANK_CITIC.png) no-repeat;}/*中信银行*/
+.bank_11,.bank_558,.bank_1137{ background:url(../img/bank/BANK_CMB.png) no-repeat;}/*招商银行*/
+.bank_16,.bank_561,.bank_1135{ background:url(../img/bank/BANK_CMBC.png) no-repeat;}/*民生银行*/
+.bank_3,.bank_555,.bank_1131{ background:url(../img/bank/BANK_COMM.png) no-repeat;}/*交通银行*/
+.bank_509{ background:url(../img/bank/BANK_CQBANK.png) no-repeat;}/*重庆银行*/
+.bank_505,.bank_1010{ background:url(../img/bank/BANK_CQRC.png) no-repeat;}/*重庆农村商业银行*/
+.bank_510{ background:url(../img/bank/BANK_DLB.png) no-repeat;}/*大连银行*/
+.bank_515,.bank_1023{ background:url(../img/bank/BANK_GCB.png) no-repeat;}/*广州银行*/
+.bank_13,.bank_559{ background:url(../img/bank/BANK_GDB.png) no-repeat;}/*广发银行*/
+.bak_517,.bak_1026{ background:url(../img/bank/BANK_GZB.png) no-repeat;}/*赣州银行*/
+.bank_522,.bank_1035{ background:url(../img/bank/BANK_HRBANK.png) no-repeat;}/*哈尔滨银行*/
+.bank_521,.bank_1032{ background:url(../img/bank/BANK_HSBANK.png) no-repeat;}/*徽商银行*/
+.bank_24,.bank_567,.bank_1134{ background:url(../img/bank/BANK_HXBANK.png) no-repeat;}/*华夏银行*/
+.bank_519,.bank_510{ background:url(../img/bank/BANK_HZCB.png) no-repeat;}/*杭州银行*/
+.bank_2,.bank_554,.bank_1127{ background:url(../img/bank/BANK_ICBC.png) no-repeat;}/*工商银行*/
+.bank_528,.bank_1052{ background:url(../img/bank/BANK_JJBANK.png) no-repeat;}/*九江银行*/
+.bank_525,.bank_1046{ background:url(../img/bank/BANK_JRCB.png) no-repeat;}/*江阴农村商业银行*/
+.bank_28,.bank_571, .bank_1143{ background:url(../img/bank/BANK_JSBANK.png) no-repeat;}/*江苏银行*/
+.bank_1042{ background:url(../img/bank/BANK_JXBANK.png) no-repeat;}/*嘉兴银行*/
+.bank_25,.bank_568{ background:url(../img/bank/BANK_NBBANK.png) no-repeat;}/*宁波银行*/
+.bank_531,.bank_1068{ background:url(../img/bank/BANK_NCB.png) no-repeat;}/*南昌银行*/
+.bank_532,.bank_1069{ background:url(../img/bank/BANK_NJCB.png) no-repeat;}/*南京银行*/
+.bank_548{ background:url(../img/bank/BANK_NXBANK.png) no-repeat;}/*银川市商业银行*/
+.bank_501,.bank_1001{ background:url(../img/bank/BANK_PSBC.png) no-repeat;}/*邮政储蓄银行*/
+.bank_22,.bank_566{ background:url(../img/bank/BANK_SDB.png) no-repeat;}/*深发银行*/
+.bank_21,.bank_565, .bank_1142{ background:url(../img/bank/BANK_SHBANK.png) no-repeat;}/*上海银行*/
+.bank_536, .bank_1079{ background:url(../img/bank/BANK_SHRCB.png) no-repeat;}/*上海农商银行*/
+.bank_22,.bank_566, .bank_1140{ background:url(../img/bank/BANK_SPABANK.png) no-repeat;}/*平安银行*/
+.bank_18,.bank_563, .bank_1139{ background:url(../img/bank/BANK_SPDB.png) no-repeat;}/*浦发银行*/
+.bank_537, .bank_1081{ background:url(../img/bank/BANK_SRBANK.png) no-repeat;}/*上饶银行*/
+.bank_540, .bank_1095{ background:url(../img/bank/BANK_TCCB.png) no-repeat;}/*台州银行*/
+.bank_546, .bank_1102{ background:url(../img/bank/BANK_URMQCCB.png) no-repeat;}/*乌鲁木齐市商业银行*/
+.bank_542, .bank_1097{ background:url(../img/bank/BANK_WHCCB.png) no-repeat;}/*威海市商业银行*/
+.bank_513,.bank_523,.bank_524,.bank_1004,.bank_1024,.bank_1029,.bank_1022,.bank_1038,.bank_1031,.bank_1036,.bank_1037,.bank_1048,.bank_1044,.bank_1045,.bank_1065,.bank_1077,.bank_1088,.bank_1089,.bank_1090,.bank_1110{ background:url(../img/bank/BANK_YDRCB.png) no-repeat;}/*农村信用社*/
+
+.bank_507{}/*长沙银行*/
+.bank_506,.bank_1011{}/*常熟农村商业银行*/
+.bank_1114{}/*朝阳银行*/
+.bank_1112,.bank_550{}/*浙江稠州商业银行*/
+.bank_1014{}/*长治市商业银行*/
+.bank_9,.bank_59{}/*DinersClub*/
+.bank_511{}/*东营银行*/
+.bank_514,.bank_1020{}/*富滇银行*/
+.bank_516,.bank_1025{}/*广州农村商业银行*/
+.bank_518,.bank_1028{}/*贵阳银行*/
+.bank_26,.bank_569{}/*东亚银行*/
+.bank_10,.bank_60,.bank_107{}/* JCB */
+.bank_527,.bank_1051{}/*金华银行*/
+.bank_1043,.bank_{}/*晋城银行*/
+.bank_529,.bank_1056{}/*龙江银行*/
+.bank_6,.bank_56,.bank_67{}/* MasterCard */
+.bank_551,.bank_1113{}/*浙江民泰商业银行*/
+.bank_1066{}/*宁波东海银行*/
+.bank_512,.bank_1017{}/*鄂尔多斯银行*/
+.bank_535,.bank_1078{}/*青岛银行*/
+.bank_1074,.bank_{}/*秦皇岛市商业银行*/
+.bank_534,.bank_1073{}/*齐鲁银行*/
+.bank_538,.bank_1087{}/*顺德农村商业银行*/
+.bank_539{}/*山西尧都农村商业银行*/
+.bank_7,.bank_57,.bank_77{}/* VISA */
+.bank_541,.bank_1096{}/*潍坊银行*/
+.bank_543,.bank_1099{}/*吴江农商银行*/
+.bank_544,.bank_1100{}/*无锡农村商业银行*/
+.bank_545,.bank_1101{}/*温州银行*/
+.bank_547{}/*宜昌市商业银行*/
+.bank_549{}/*鄞州银行*/
+.bank_552,.bank_{}/*浙江泰隆商业银行*/
+.bank_8,.bank_58{}/* AmericanExpress */
+.bank_526,.bank_{}/*锦州银行*/
+.bank_530,.bank_1062{}/*兰州银行*/
+.bank_508,.bank_1012{}/*承德银行*/
+.bank_504,.bank_1008{}/*成都农村商业银行*/
+.bank_572,.bank_1121{}/*花旗银行*/
+.bank_,.bank_{}/**/
+.bank_,.bank_{}/**/
+.bank_,.bank_{}/**/
+.bank_,.bank_{}/**/

@@ -1,0 +1,47 @@
+﻿<%if(realNameType === -1){%>
+<div class="cui-pop-box">
+    <div class="cui-hd" style=" background:#f6f6f6; color:#000; font-size:18px; text-align: center;"><%=realNameTitle%></div>
+    <div class="cui-bd bcf6">
+        <div class="p0_15 font12"><span style=" color:#fb0000;">认证后无法修改身份信息</span><%=realNameTip%></div>
+        <ul class="realname mt10">
+<%}else{//0/1/2%>
+<div class="cui-view cui-layer cui-alert" style="margin-left: -140px; top:30px; z-index: 3007; visibility: visible; position:relative;"> <i class="tipserro"></i>
+<div class="cui-pop-box" style="width:280px;">
+    <div class="cui-hd lh1 t_c" style=" background:#099fde; padding:30px 10px 15px 10px; height:inherit; text-align: center;  font-size: 1em"> <%=realNameTitle%>
+    <%if(realNameType !== 1){%>
+    <div class="font12 t_l padtop10">
+        <%if(realNameType === 0){%>
+        <span style=" color:#fb0000;">认证后无法修改身份信息</span>
+        <%}%>
+        <%=realNameTip%></div>
+    <%}%>
+    </div>
+    <div class="cui-bd">
+        <ul class="realname">
+<%}%>
+            <li><span>姓名</span><%=cardHolder%></li>
+            <%if(cardType != 1){%>
+            <li><span>证件类型</span><%=cardTypeString%></li>
+            <%};%>
+            <%if(cardType == 1){%>
+            <li><span>身份证</span><%=cardNo%></li>
+            <%}else{%>
+            <li><span>证件号码</span><%=cardNo%></li>
+            <%};%>
+        </ul>
+<%if(realNameType === -1){%>
+        <div class="cui-roller-btns">
+            <div class="J_Widget_RealName_Cancel cui-flexbd cui-btns-cancel bcf6">取消</div>
+            <div class="J_Widget_RealName_Confirm cui-flexbd cui-btns-sure bcf6">确认</div>
+        </div>
+    </div>
+</div>
+<%}else{%>
+        <div class="newbtn">
+            <div class="J_Widget_RealName_Cancel a1">取消</div>
+            <div class="J_Widget_RealName_Confirm a2">确认</div>
+        </div>
+    </div>
+</div>
+</div>
+<%}%>

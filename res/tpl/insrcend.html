@@ -1,0 +1,75 @@
+﻿<article class="wrap white">
+<%if(insrctype == 2 && authStu == 2 && !isAddedInfo){%>
+    <div class="anx_box mb10 boxshadow">
+       <div class="aqxicon4"></div>
+       <div class="font18px grey2 t_c mb5">实名信息审核中，暂无法投保</div>
+       <div class="font13 grey t_c mb10">实名认证成功后方可投保，请耐心等待审核结果<br>（预计1个工作日）</div>
+    </div>
+     <div class="p10"><button class="btn finish">完成</button></div>
+<%}else{%>
+    <%if(isless18th){%>
+        <!-- 未满18岁-->
+        <%if(hsdVfd){%>
+            <div class="t_c mb5"><span class="smxx_ok"><i></i><%=authText%></span></div>
+        <%}%>
+        <div class="anx_box mb10">
+            <div class="aqxicon2"></div>
+            <%if(insrctype == 1){%>
+              <div class="font18px grey2 t_c mb5">抱歉，未满18岁无法领取</div>
+            <%}else{%>
+              <div class="font18px grey2 t_c mb5">抱歉，未满18岁无法投保</div>
+            <%}%>
+        </div>
+        <div class="p10"><button class="btn finish">完成</button></div>
+    <%}else{%>
+    <!-- 满18岁-->
+       <% if(insrcStu==3){%><!-- 失败-->
+            <!-- 投保失败-->
+            <%if(hsdVfd){%>
+            <div class="t_c mb5"><span class="smxx_ok"><i></i><%=authText%></span></div>
+             <%}%>
+            <div class="anx_box mb10 boxshadow">
+              <div class="aqxicon1"></div>
+              <div class="font18px grey2 t_c mb5">抱歉，投保失败</div>
+              <div class="font13 grey"></div>
+              </div>
+            <div class="p10"><button class="btn finish">完成</button></div>
+        <%}else{%>
+        <!-- 投保成功-->
+                <div class="zhanx">
+                   <% if(complogo!=''){%>
+                        <span class="zabxlogo"><img src="<%=complogo%>" width="75" height="25"></span>
+                    <%}%>
+                    <% if(insrcStu==0){%><!-- 信息审核中-->
+                        <span class="bxlogo_2"></span>
+                     <%}else if(insrcStu==1){%><!-- 已成功领取-->
+                        <span class="bxlogo_3"></span>
+                     <%}else if(insrcStu==2){%><!-- 保障中-->
+                        <span class="bxlogo_1"></span>
+                    <%}%>
+                    <div class="text_width">
+                    <h3 class="mb5"><%=prdname%></h3>
+                    <div><%=insrcText%></div>
+                    </div>
+                </div>
+                <div class="anx_box mb10">
+                    <ul>
+                        <li><span>姓名</span><div><%=name%></div></li>
+                        <%if(idtype != 1){%>
+                        <li><span>证件类型</span><%=idtypeString%></li>
+                        <%};%>
+                        <%if(idtype == 1){%>
+                        <li><span>身份证</span><%=idNo%></li>
+                        <%}else{%>
+                        <li><span>证件号码</span><%=idNo%></li>
+                        <%};%>
+                    </ul>
+                </div>
+                <%if(isInApp){%>
+                    <div class="p10"><button class="btn wxShare"><i class="btnlogo2"></i>通知好友来抢</button></div>
+               <%};%>
+                
+        <%}%>
+    <%}%>
+<%}%>
+</article>
