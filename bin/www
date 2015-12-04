@@ -88,4 +88,5 @@ function onListening() {
     : 'port ' + addr.port;
   //debug('Listening on ' + bind);
   console.log('Listening on ' + bind);
+  console.log('localhost:3000/webapp/wallet/debug');
 }
