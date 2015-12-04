@@ -8,5 +8,5 @@ Translate views/res to node.js format.
 2. Put node-wallet in Wallet_WebApp
 3. Move Gruntfile.js and package.json.bak from node-wallet to Wallet_WebApp, and rename package.json.bak to package.json 
 4. run `npm install` and `grunt` in Wallet_WebApp
-5. run `npm start` to start node-express
+5. cd node-wallet and run `npm start` to start node-express
 
